@@ -33,4 +33,11 @@ public class BusTest {
         assertEquals(2, bus.passengerCount());
     }
 
+    @Test
+    public void canRemovePassenger() {
+        bus.addPassenger(passenger);
+        bus.removePassenger();
+        assertEquals(0, bus.passengerCount());
+    }
+
 }
