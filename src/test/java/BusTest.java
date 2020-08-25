@@ -51,4 +51,13 @@ public class BusTest {
         assertEquals(1, bus.passengerCount());
     }
 
+    @Test
+    public void canNotPickUpPassengerFromBusStop() {
+        bus = new Bus("Ocean Terminal", 2);
+        bus.pickUpFromBusStop(busStop);
+        bus.pickUpFromBusStop(busStop);
+        bus.pickUpFromBusStop(busStop);
+        assertEquals(2, bus.passengerCount());
+    }
+
 }
