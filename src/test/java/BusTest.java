@@ -24,4 +24,13 @@ public class BusTest {
         assertEquals(1, bus.passengerCount());
     }
 
+    @Test
+    public void canNotAddPassenger() {
+        bus = new Bus("Ocean Terminal", 2);
+        bus.addPassenger(passenger);
+        bus.addPassenger(passenger);
+        bus.addPassenger(passenger);
+        assertEquals(2, bus.passengerCount());
+    }
+
 }
